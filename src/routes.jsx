@@ -5,6 +5,7 @@ import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
 
 import Header from "./components/Header";
+import Erro from "./pages/Erro";
 
 export default function RoutesApp() {
     return(
@@ -14,6 +15,9 @@ export default function RoutesApp() {
                 <Route path="/" element={ <Home/> }/>
                 <Route path="/Sobre" element={ <Sobre/> }/>
                 <Route path="/Contato" element={ <Contato/> }/>
+
+                //o * encaminha para a pagina de erro
+                <Route path="*" element={ <Erro/> }/>
             </Routes>
         </BrowserRouter>
     )
